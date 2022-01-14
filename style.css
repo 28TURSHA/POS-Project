@@ -1,0 +1,20 @@
+#products {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  img {
+    height: 200px !important;
+    
+  }
+  
+  .card {
+    width: calc((100% / 4) - 15px);
+    min-width: 300px;
+    border: solid 2px red;
+  }
+  
+  .card-title {
+    text-transform: capitalize;
+  }
+  
