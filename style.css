@@ -8,9 +8,10 @@ img {
 }
 
 .card {
-  width: 200px;
+  width: 210px;
   min-width: 300px;
   border: solid 2px red;
+  
 }
 
 .card-title {

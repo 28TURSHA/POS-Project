@@ -64,6 +64,7 @@ function readProducts(products) {
         <img src="${product.img}" class="card-img-top" alt="${product.title}">
         <div class="card-body">
           <h5 class="card-title">${product.title}</h5>
+          <h5 class="card-title">${product.category}</h5>
           <p class="card-text">R${product.price}</p>
           <div class="d-flex mb-3">
             <input type="number" class="form-control" value=1 min=1 id="addToCart${position}">
@@ -215,9 +216,7 @@ function updateProduct(position) {
 
 // DELETE
 function deleteProduct(position) {
-  let confirmation = confirm(
-    "Are you sure you want to delete this item?"
-  );
+  let confirmation = confirm("Are you sure you want to delete this item?");
 
   if (confirmation) {
     products.splice(position, 1);
@@ -241,9 +240,7 @@ function addToCart(position) {
   });
   if (!added) {
     cart.push({ ...products[position], qty });
-    alert(
-      `You have now added ${qty} ${products[position].title} to your cart`
-    );
+    alert(`You have now added ${qty} ${products[position].title} to your cart`);
   }
 
   showCartBadge();
