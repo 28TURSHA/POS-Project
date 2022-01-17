@@ -1,20 +1,22 @@
 #products {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  img {
-    height: 200px !important;
-    
-  }
-  
-  .card {
-    width: calc((100% / 4) - 15px);
-    min-width: 300px;
-    border: solid 2px red;
-  }
-  
-  .card-title {
-    text-transform: capitalize;
-  }
-  
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+img {
+  height: 200px !important;
+}
+
+.card {
+  width: 200px;
+  min-width: 300px;
+  border: solid 2px red;
+}
+
+.card-title {
+  text-transform: capitalize;
+}
+
+body {
+  background-color:rgb(121, 113, 113);
+}

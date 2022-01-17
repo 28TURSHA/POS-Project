@@ -11,13 +11,13 @@ let products = JSON.parse(localStorage.getItem("products"))
         title: "Pink Strappy Heel",
         category: "Stiletto",
         price: "349.99",
-        img: "https://i.postimg.cc/50Qs4c7z/still2.jpg",
+        img: "https://i.postimg.cc/mrws6mS8/fearne-pink-3.jpg",
       },
       {
         title: "Chuncky Heel",
         category: "Platform",
         price: "429.99",
-        img: "https://i.postimg.cc/YCXRQ2Tg/plat1.jpg",
+        img: "https://i.postimg.cc/brZ23D1N/fluffy.jpg",
       },
       {
         title: "Simple Black Heel",
@@ -29,7 +29,7 @@ let products = JSON.parse(localStorage.getItem("products"))
         title: "Silver Heel",
         category: "Platform",
         price: "499.99",
-        img: "https://i.postimg.cc/C10R1kJ4/plat3.jpg",
+        img: "https://i.postimg.cc/Gh7KmdSR/destiny-silver.jpg",
       },
       {
         title: "String Heel",
@@ -41,7 +41,7 @@ let products = JSON.parse(localStorage.getItem("products"))
         title: "Plain Block Heel",
         category: "Block Heel",
         price: "299.99",
-        img: "https://i.postimg.cc/5Nmv72Qx/fzz63744-black-xl.jpg",
+        img: "https://i.postimg.cc/52XQJFrB/block3.jpg",
       },
       {
         title: "White Toe Heel",
@@ -216,7 +216,7 @@ function updateProduct(position) {
 // DELETE
 function deleteProduct(position) {
   let confirmation = confirm(
-    "Are you sure you want to delete the selected product?"
+    "Are you sure you want to delete this item?"
   );
 
   if (confirmation) {
@@ -233,7 +233,7 @@ function addToCart(position) {
   cart.forEach((product) => {
     if (product.title == products[position].title) {
       alert(
-        `You have successfully added ${qty} ${products[position].title} to the cart`
+        `You have now added ${qty} ${products[position].title} to your cart`
       );
       product.qty = parseInt(product.qty) + parseInt(qty);
       added = true;
@@ -242,7 +242,7 @@ function addToCart(position) {
   if (!added) {
     cart.push({ ...products[position], qty });
     alert(
-      `You have successfully added ${qty} ${products[position].title} to the cart`
+      `You have now added ${qty} ${products[position].title} to your cart`
     );
   }
 

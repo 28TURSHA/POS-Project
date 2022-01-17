@@ -73,7 +73,7 @@ function updateCart(position) {
 // Remove
 function removeFromCart(position) {
   let confirmation = confirm(
-    "Are you sure you want to remove this product from the cart?"
+    "Are you sure you want to delete this item?"
   );
 
   if (confirmation) {
@@ -91,7 +91,7 @@ function checkout() {
     }, 0)
     .toFixed(2);
   try {
-    if (parseInt(total) == 0) throw new Error("Nothing in cart");
+    if (parseInt(total) == 0) throw new Error("Cart is empty");
     let confirmation = confirm(`Total payment needed: R${total}`);
 
     if (confirmation) {
